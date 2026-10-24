@@ -1,0 +1,10 @@
+name: e2e-check
+on:
+  pull_request:
+    branches: [main, dev]
+permissions: {}
+jobs:
+  e2e-check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "synthetic check for the Arbiter live suite"
