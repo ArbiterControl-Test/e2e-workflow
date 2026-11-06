@@ -8,3 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "synthetic check for the Arbiter live suite"
+      - if: contains(github.event.pull_request.title, '[e2e-check-fails]')
+        run: exit 1
